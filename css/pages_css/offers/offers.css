@@ -1,0 +1,150 @@
+
+    /* General Body Styles */
+
+    /* Container for centering content */
+    .container-offer {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Page Header Styles */
+    .page-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .page-title {
+        font-size: 2.5rem; /* 40px */
+        font-weight: 800;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+    font-family: "Playfair Display", Sans-serif;
+
+    }
+
+    .page-subtitle {
+        font-size: 1.125rem; /* 18px */
+        color: #6b7280;
+        max-width: 42rem;
+        margin: 0 auto;
+    }
+
+    /* Offer Cards Grid */
+    .offer-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Individual Offer Card */
+    .offer-card {
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        min-height: 250px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .offer-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .offer-card::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: transform 0.4s ease;
+    }
+
+    .offer-card:hover::before {
+        transform: scale(1.2);
+    }
+
+    .offer-title {
+        font-size: 2.25rem; /* 36px */
+        font-weight: 800;
+        margin: 0 0 0.5rem 0;
+        z-index: 1;
+    }
+
+    .offer-description {
+        font-size: 1rem;
+        max-width: 80%;
+        margin-bottom: 1.5rem;
+        z-index: 1;
+        opacity: 0.9;
+    }
+
+    .offer-button {
+        background-color: white;
+        color: #333;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        align-self: flex-start;
+        z-index: 1;
+    }
+
+    .offer-button:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Card-specific styles */
+    .card-bogo {
+        background: linear-gradient(135deg, #34d399, #10b981);
+    }
+    .card-bogo .offer-button { color: #10b981; }
+
+    .card-10-off {
+        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    }
+    .card-10-off .offer-button { color: #3b82f6; }
+
+    .card-festive-off {
+        background: linear-gradient(135deg, #f87171, #ef4444);
+    }
+    .card-festive-off .offer-button { color: #ef4444; }
+
+    .card-deal-day {
+        background: linear-gradient(135deg, #facc15, #eab308);
+    }
+    .card-deal-day .offer-button { color: #eab308; }
+
+
+    /* Responsive Styles */
+    @media (min-width: 768px) {
+        .offer-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .offer-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .page-title {
+            font-size: 3rem; /* 48px */
+        }
+    }

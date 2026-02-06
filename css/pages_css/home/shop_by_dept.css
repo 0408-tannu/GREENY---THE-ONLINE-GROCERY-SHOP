@@ -1,0 +1,108 @@
+/* Your existing styles, slightly modified for the new structure */
+.shopby-department {
+    margin: 40px 0;
+    position: relative; /* Important for positioning the buttons */
+}
+
+.shopby-department h2 {
+    font-weight: 500;
+    margin: 30px 0;
+    font-size: 36px;
+    color: var(--color-black);
+    font-family: "Work Sans", sans-serif;
+}
+
+.image-box {
+    width: 140px;
+    height: 170px;
+    padding: 10px 20px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 15px hsla(0, 0%, 51%, .16);
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+}
+.image-box:hover {
+    border-color: var(--border-hover-green);
+}
+
+.image-box img {
+    width: 100%;
+    height: 90px;
+    display: block;
+    margin: 5px auto;
+}
+
+.image-box span {
+    display: block;
+    padding-top: 7px;
+    font-weight: 600;
+    color: var(--color-black);
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+/*
+================================
+Swiper.js Custom Styles
+================================
+*/
+.department-slider {
+    /* position: relative; */
+    padding-top: 20px; /* Add space for the buttons */
+    
+}
+.swiper-container {
+    width: 100%;
+    overflow: hidden; /* THIS IS THE KEY FIX */
+    /* position: relative; Good practice for positioning nav buttons */
+}
+/* Style the navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-black); /* Use your color variable */
+    --swiper-navigation-size: 25px; /* Adjust the arrow size */
+    color: var(--color-black); 
+
+    /* Adjusts the size of the arrow icon itself */
+    --swiper-navigation-size: 20px; 
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 20px;
+    position: absolute;
+    
+}
+
+.shopby-department .swiper-button-next {
+    right: 60px;
+}
+
+.shopby-department .swiper-button-prev {
+    right: 120px;
+    left: auto;
+}
+
+a.department-link {
+    text-decoration: none;
+}
+
+
+.swiper-button-next:hover{
+    background-color: var(--color-yellow);
+    color: white;
+    border-color: var(--color-yellow);
+    
+}
+.swiper-button-prev:hover {
+    background-color: var(--color-yellow);
+    color: white;
+    border-color: var(--color-yellow);
+}

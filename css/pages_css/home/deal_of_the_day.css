@@ -1,0 +1,229 @@
+.deal-of-the-day{
+  width: 100%;
+  height: fit-content;
+  background-color:var(--color-light-yellow);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* .deal-of-the-day::before{
+    opacity: 0.5;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+} */
+.cutout-flex{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: -45px;
+    left: 0;
+}
+
+.deal-of-the-day img{
+   
+    height:100px;
+    
+    width: 100%;
+    z-index: 99;
+}
+.deal-of-the-day .bottom{
+   
+    height: 50px;
+     width: 100%;
+     margin-top: -100px;
+    z-index: 99;
+}
+
+.main-flex{
+    display: grid;
+    grid-template-columns: 460px  1fr;
+    gap: 50px;
+    /* padding: 30px 0; */
+}
+
+.text h2{
+  color: var(--color-brand);
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 55px;
+  text-align: center;
+  /* padding-top: 50px; */
+}
+
+.text-section h4{
+    font-size: 50px;
+  font-family: "Playfair Display", Sans-serif;
+  margin: 0 auto;
+  max-width: 250px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--color-green);
+
+}
+
+.text-section span{
+    display: block;
+  font-family: "Playfair Display", Sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px auto;
+    color: var(--color-brand);
+}
+
+.offer p{
+    display:inline;
+    align-items: center;
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-brand);
+}
+
+.offer .color-green {
+    color: var(--color-green);
+    
+}
+
+.order-btn button{
+    background-color:var(--color-green);
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 14px 30px;
+    border: 0cap;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    z-index: 99;
+}
+
+/* slider */
+
+.deal-of-the-day .product-slider-wrapper {
+    width: 100%;
+}
+.product-slider-wrapper .section-header {
+    display: none; /* Hides the empty title from the function */
+}
+
+
+
+/* card design */
+.product-card img{
+    height: 120px;
+    max-width: 120px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color:white;
+    padding: 27px 18px 18px;
+    border: 1px solid var(--border-color);
+    width: 100%; /* Changed from fit-content to be responsive */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    transition: border-color 0.3s ease;
+    position: relative; /* Needed for offer badges */
+    overflow: hidden;
+}
+
+
+.product-card p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.product-card h3{
+    text-align: center;
+    margin: 5px auto;
+}
+
+
+/*
+================================
+Swiper.js Styles for the Simple Slider
+================================
+*/
+.swiper-container.simple-slider {
+    width: 100%;
+    overflow-x: hidden;
+}
+.simple-slider .swiper-slide {
+    display: flex;
+    align-items: stretch;
+    height: auto;
+}
+.simple-slider .product-card {
+    width: 100%;
+}
+
+.simple-slider .swiper-button-next{
+ right: 0;
+}
+.simple-slider .swiper-button-prev{
+ right: 50px;
+}
+.simple-slider .swiper-button-next,
+.simple-slider .swiper-button-prev {
+    color: var(--color-black);
+    --swiper-navigation-size: 20px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: -25px;
+}
+.simple-slider .swiper-button-next:hover,
+.simple-slider .swiper-button-prev:hover {
+    background-color: var(--color-yellow);
+    color: white;
+}
+
+
+/*
+================================
+Deal of the Day Section - FINAL
+================================
+*/
+
+
+
+/* Styles for the left column (text content) */
+.deal-of-the-day .text-section {
+    flex: 0 0 40%; /* Takes up 40% of the space and does not grow/shrink */
+    text-align: center;
+}
+
+/* Styles for the right column (slider) */
+.deal-of-the-day .product-slider-wrapper {
+    flex: 0 0 60%; /* Takes up 60% of the space and does not grow/shrink */
+    min-width: 0; /* A crucial fix for flexbox and sliders */
+}
+
+/* Hide the function's h2, since you have one already */
+.product-slider-wrapper .section-header {
+    display: none;
+}
+
+
+
+
+.product-slider-wrapper .simple-slide {
+    padding: 10px 22px;
+}

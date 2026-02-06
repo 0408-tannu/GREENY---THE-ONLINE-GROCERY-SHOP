@@ -1,0 +1,123 @@
+
+/*
+================================
+Admin Dashboard Styles
+================================
+*/
+
+.dashboard-container h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the main statistic cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #007bff; /* Blue accent color */
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #343a40;
+}
+
+/* Different accent colors for other cards */
+.stat-card:nth-child(2) { border-color: #28a745; } /* Green */
+.stat-card:nth-child(3) { border-color: #ffc107; } /* Yellow */
+.stat-card:nth-child(4) { border-color: #17a2b8; } /* Teal */
+
+/* Styles for the data sections like recent orders */
+.data-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.data-section h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.data-table th {
+    font-weight: 600;
+    color: #495057;
+}
+
+.action-btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Status pill styles */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+  .status.pending {
+            background-color: #ffeeba;
+            color: #856404;
+        }
+
+        .status.processing {
+            background-color: #b8daff;
+            color: #004085;
+        }
+
+        .status.shipped {
+            background-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .status.delivered {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status.cancelled {
+            background-color: #f8d7da;
+            color: #721c24;
+        }

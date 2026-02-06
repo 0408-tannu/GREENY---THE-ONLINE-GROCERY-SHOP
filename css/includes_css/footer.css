@@ -1,0 +1,223 @@
+
+    /*
+    ================================
+    Facility Bar Styles
+    ================================
+    */
+    .facilitybar {
+        padding: 40px 0;
+        border-top: 1px solid #e0e0e0; /* Added a top border for separation */
+        border-bottom: 1px solid #e0e0e0; /* Added a bottom border */
+    }
+
+    .facility-flex {
+        display: flex;
+        justify-content: space-between; /* Spreads items out evenly */
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+    }
+
+    .f-items {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-grow: 1; /* Allows items to grow and fill the space */
+    }
+
+    .f-items img {
+        width: 40px; /* Standardized icon size */
+        height: 40px;
+    }
+
+    .f-items p {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        color: #333;
+    }
+
+    .f-items span {
+        font-size: 14px;
+        color: #707070; /* Using your color variable */
+    }
+
+
+       /*
+    ================================
+    Footer Styles
+    ================================
+    */
+   
+    .footer-flex {
+        padding: 30px 0 57px;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr 1fr; /* Adjusted for better spacing */
+        gap: 30px;
+        /* border-top: 1px solid var(--border-color); */
+    }
+
+    /* --- Column 1: Contact Info --- */
+    .footer-item1 img {
+        width: 177px;
+        padding-bottom: 10px;
+    }
+    .footer-item1 p {
+        font-size: 15px;
+        font-family: "Work Sans", sans-serif;
+        margin-bottom: 10px;
+        color: var(--color-black);
+        display: block;
+        font-weight: 600;
+    }
+    .footer-item1 span {
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 10px;
+        color: var(--color-black);
+        display: block;
+    }
+    .footer-item1 a {
+        font-size: 19px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 10px;
+        color: var(--color-black);
+        display: block;
+        text-decoration: none;
+    }
+    .footer-item1 .g {
+        font-size: 15px;
+        color: #13C487; /* Green color */
+        margin-bottom: 10px;
+    }
+    .footer-item1 .email {
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        color: var(--color-black);
+    }
+
+    /* --- Column 2: Navigation Links --- */
+    .footer-item2 {
+        width: 100%;
+        display: grid;
+        gap: 30px; /* Adjusted for better spacing */
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+    .footer-item2 h3 {
+        font-size: 16px;
+        color: var(--color-black);
+        margin-bottom: 15px;
+        font-family: "Work Sans", sans-serif;
+    }
+    .footer-item2 a {
+        color: #777777;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        display: block;
+        padding-bottom: 8px;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .footer-item2 a:hover {
+        color: var(--color-yellow);
+    }
+    
+    /* --- Column 3: App & Payment --- */
+    .footer-item3 h3 {
+        font-family: "Work Sans", sans-serif;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .footer-item3 h4 {
+        font-weight: 500;
+        font-size: 16px;
+        font-family: "Work Sans", sans-serif;
+        margin-bottom: 10px;
+        margin-top: 1.5rem;
+    }
+    .item3-flex {
+        display: flex;
+        gap: 10px;
+    }
+    .item3-flex img {
+        width: 120px; /* Adjusted for better fit */
+        height: auto;
+    }
+    .method-flex img {
+        max-width: 250px;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 1024px) {
+        .footer-flex {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-item3 {
+            grid-column: span 2; /* Make it take the full width */
+        }
+    }
+    @media (max-width: 576px) {
+        .footer-flex {
+            grid-template-columns: 1fr;
+        }
+        .footer-item2 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .footer-item3 {
+            grid-column: auto;
+        }
+    }
+    /* Responsive adjustments for tablet and smaller */
+    @media (max-width: 1024px) {
+        .facility-flex {
+            justify-content: flex-start;
+        }
+        .f-items {
+            flex-basis: 45%; /* Each item takes up roughly half the width */
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .f-items {
+            flex-basis: 100%; /* Each item takes up the full width */
+        }
+    }
+
+
+
+    .facility-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .f-items:hover .feature-icon {
+            transform: rotate(-15deg);
+        }
+
+    .f-items:hover {
+            transform: scale(1.03);
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+    .feature-icon--delivery { background-color: #e6f3ff; color: #007bff; }
+        .feature-icon--returns { background-color: #fff4e6; color: #ff9800; }
+        .feature-icon--payment { background-color: #eafaf1; color: #1e8449; }
+        .feature-icon--support { background-color: #f3e8ff; color: #673ab7; }
+        .feature-icon--offers { background-color: #ffebee; color: #f44336; }

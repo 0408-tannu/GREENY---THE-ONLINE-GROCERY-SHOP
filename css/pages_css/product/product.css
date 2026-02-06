@@ -1,0 +1,439 @@
+/* herobanner-css */
+.herobanner-products {
+    width: 100%;
+    height: 500px;
+    padding: 10px  20px;
+    position: relative;
+}
+
+.herobanner-products img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.hbanner-for-products-text{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translateX(-50%);
+    transform: translateY(-30%);
+}
+
+.hbanner-for-products-text h4{
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Playfair Display", Sans-serif;
+    text-align: center;
+    
+}
+
+.hbanner-for-products-text h5{
+    color: var(--color-green);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Playfair Display", Sans-serif;
+
+}
+
+.hbanner-for-products-text p{
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+.hbanner-for-products-text button{
+    padding: 12px;
+    margin: 0 auto;
+    display: block;
+    background-color: var(--color-yellow);
+    border: 0cap;
+    border-radius: 5px;
+    color: white;
+}
+/*
+================================
+Product Card Styles (.about-product)
+================================
+*/
+
+/* //for heading tag */
+
+
+.department-section h2{
+
+    margin: 40px 0;
+    font-weight:700;
+    font-family: 'work sans',sans-serif;
+    color: var(--color-green);
+    font-size: 40px;
+    /* font-family: "Playfair Display", Sans-serif; */
+
+}
+
+.section-header a{
+    text-align: right;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 150px;
+}
+/* The main container for a single product card */
+.about-product {
+    padding: 27px 18px 18px;
+    border: 1px solid var(--border-color);
+    width: 100%; /* Changed from fit-content to be responsive */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    transition: border-color 0.3s ease;
+    position: relative; /* Needed for offer badges */
+    overflow: hidden;
+
+}
+
+.about-product:hover {
+    border-color: var(--border-hover-green);
+}
+
+/* Container for the main product image */
+.image-prod {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s all ease-in-out;
+}
+
+.image-prod img {
+    height: 172px;
+    max-height: 172px;
+    max-width: 180px;
+    object-fit: cover;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.about-product:hover .image-prod img{
+    transform: scale(120%);
+}
+
+/* Category name text */
+.about-product .sp1 {
+    color: var(--color-grey);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Product name title */
+.about-product h5 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 22px;
+}
+
+.about-product h5 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.about-product h5 a:hover {
+    color: var(--color-yellow);
+}
+
+/* Rating text */
+
+.rating {
+    display: flex;
+    align-items: start;
+    gap: 0.25rem;
+}
+
+.rating-star {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #facc15; /* text-yellow-400 */
+}
+
+.rating-text {
+    color: #374151; /* text-gray-700 */
+    font-weight: 700;
+}
+
+.about-product .s2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--color-grey);
+}
+
+/* Regular price section */
+.about-product .regular-price-section {
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+}
+
+.about-product .regular-price-section h6 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.about-product .regular-price-section span {
+    color: var(--color-grey);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+/* Digital Coupon Banner */
+.image {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjusted for better fit */
+    margin: 10px 0 0 0;
+}
+
+.image img {
+    width: 95%;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 0 0 -18px;
+}
+
+.image .text {
+    position: absolute;
+    top: 28%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Final price section */
+.price {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+   
+}
+
+.price h5 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.price h3 {
+    color: var(--color-green);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Add to Cart section */
+/*
+================================
+New Quantity Selector Styles
+================================
+*/
+.button-group-alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.counter {
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+.action-button, .action-button-plus {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--color-grey);
+}
+.action-button:hover, .action-button-plus:hover {
+    color: var(--color-black);
+}
+
+.add-to-cart button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #E5FEF2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart button span {
+    font-size: 14px;
+    color: var(--color-green);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.add-to-cart button svg {
+   fill:var(--color-green);
+    transition: fill 0.3s ease;
+}
+
+.add-to-cart button:hover {
+    background-color: var(--color-green);
+}
+
+.add-to-cart button:hover span,
+.add-to-cart button:hover svg {
+    color: white;
+    fill: white;
+}
+.add {
+    width: fit-content;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #E5FEF2;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-green);
+    transition: color 0.3s ease;
+}
+
+.add h5 {
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+    margin: 0;
+    color: var(--color-green);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.add:hover {
+    background-color: var(--color-green);
+}
+
+.add:hover h5,
+.add:hover svg {
+    color: white;
+}
+
+/* Main Grid Container for Products */
+.department-section {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.product-grid-container {
+    display: grid;
+    /* This will create a responsive grid */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+/*
+================================
+Slider Button Styles
+================================
+*/
+
+/* This container is needed to position the buttons correctly */
+.department-section {
+    margin-bottom: 3rem;
+}
+/*
+================================
+Swiper.js Slider Styles
+================================
+*/
+
+/* This is the main container for a slider.
+   It's important to hide the overflowing slides. */
+   .swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* This is a single slide in the slider.
+   It ensures proper alignment and spacing. */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Makes cards in a row the same height */
+    height: auto; /* Allows the card to determine its own height */
+    box-sizing: border-box;
+}
+
+/* This makes sure your product card fills the slide completely */
+.swiper-slide .about-product {
+    width: 100%;
+}
+
+/* These are the styles for the navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    /* Uses your color variable from :root */
+    color: var(--color-black); 
+
+    /* Adjusts the size of the arrow icon itself */
+    --swiper-navigation-size: 20px; 
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 40px; /* Vertically centers the buttons */
+    transform: translateY(-50%);
+}
+.swiper-button-prev {
+    left: auto;
+    right: 70px;
+}
+/* Style the buttons on hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--color-yellow);
+    color: white;
+}
+
+.search-results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.search-results-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.search-results-header p {
+    font-size: 1.1rem;
+    color: var(--color-grey);
+}

@@ -1,0 +1,66 @@
+/*
+================================
+Admin Data Table Styles (Reusable)
+================================
+*/
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-container h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+.data-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.data-section h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.data-table th {
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Reusable button for actions in a table */
+.action-btn {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for disabled action buttons */
+.action-btn.disabled {
+    background-color: #6c757d; /* Grey color */
+    cursor: not-allowed;
+    pointer-events: none; /* Disables clicking */
+}

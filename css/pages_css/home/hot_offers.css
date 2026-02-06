@@ -1,0 +1,98 @@
+.hot-offers h2{
+    margin: 0 0 30px 0;
+    font-weight:700;
+    font-family: 'work sans',sans-serif;
+    color: var(--color-green);
+    font-size: 40px;
+    /* font-family: "Playfair Display", Sans-serif; */
+}
+
+.offer-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 10px 0 40px 0;
+}
+
+.offer-grid-items{
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3S ease-in-out;
+}
+
+.offer-grid-items:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.one{
+    padding: 50px 20px 50px 20px;
+    background-image: url('https://demo.themerally.com/elementor-template/wp-content/uploads/2021/11/cat1.png');
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+
+.two{
+    padding: 50px 20px 50px 20px;
+    background-image: url('https://demo.themerally.com/elementor-template/wp-content/uploads/2021/11/cat2.png');
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+
+}
+
+.three{
+    padding: 50px 20px 50px 20px;
+    background-image: url('https://demo.themerally.com/elementor-template/wp-content/uploads/2021/11/cat3.png');
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+
+}
+
+.one h4{
+    max-width: 80px;
+    font-size: 28px;
+    font-family: "Playfair Display", Sans-serif;
+    color: var(--color-brand);
+
+}
+
+.two h4{
+    /* max-width: px; */
+    font-size: 28px;
+    font-family: "Playfair Display", Sans-serif;
+    color: var(--color-brand);
+
+    
+}
+
+.three h4{
+    max-width: 280px;
+    font-size: 28px;
+    font-family: "Playfair Display", Sans-serif;
+    color: var(--color-brand);
+
+}
+
+.two button{
+    margin: 50px 0 0 0 ;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+
+.one button
+{
+    margin: 10px 0 0 0 ;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.three button{
+    margin: 50px 0 0 0 ;
+    font-size: 16px;
+    padding: 10px 15px;
+
+}

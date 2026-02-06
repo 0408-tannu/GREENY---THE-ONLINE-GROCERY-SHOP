@@ -1,0 +1,147 @@
+
+    /* --- Google Font Import --- */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    /* --- Main Container for the Cards --- */
+    .product-section-container {
+        display: grid;
+        grid-template-columns: 650px 1fr;
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 4rem auto; /* Added margin for spacing */
+        
+        justify-content: center;
+    }
+
+    /* --- General Card Styles --- */
+    .product-section-container .product-card {
+        border-radius: 16px;
+        padding: 2.5rem;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-section-container .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- Specific Card Colors & Layout --- */
+    .card-premium {
+        background-color: #c8f7e1; /* Light mint green */
+        flex: 13; /* This card takes up ~65% of the space */
+        background-image: url('/grocershopNew/assets/images/primium-image.png');
+        background-position: right;  
+        background-size: 350px;
+        background-repeat: no-repeat;
+
+    }
+    .card-popular {
+        background-color: var(--color-light-yellow); /* Light sandy yellow */
+        flex: 7; /* This card takes up ~35% of the space */
+        background-image: url('https://demo2.wpopal.com/ecolive/wp-content/uploads/2021/10/h1_img2.jpg');
+        background-position:center;
+        background-size: cover;
+    }
+
+    /* --- Text Styling inside the Cards --- */
+    .card-subtitle {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #333;
+    }
+    .card-premium p,
+    .card-popular p{
+        text-align: left;
+        margin: 0 auto 20px 0;
+    }
+
+    .card-premium h2,
+    .card-popular h2{
+  font-family: "Playfair Display", Sans-serif;
+  color: var(--color-brand);
+
+
+    }
+    .card-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+    }
+
+    /* --- Shop Now Button Styles --- */
+    .shop-now-btn {
+        background-color: #28a745; /* Vibrant green */
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        align-self: flex-start;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .shop-now-btn:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+  
+
+
+    /*
+    ================================
+    THE BANNER FIX
+    ================================
+    */
+    /* This rule is now very specific to avoid conflicts */
+    .banner-container .banner-delivery {
+        position: relative; /* THIS IS THE KEY: Creates the positioning anchor */
+        width: 100%;
+        margin:  0 0 40px 0;
+        border-radius: 20px;
+        overflow: hidden; /* Ensures the image corners are rounded */
+    }
+    .banner-container .banner-delivery img {
+        width: 100%;
+        display: block; /* Removes extra space under the image */
+    }
+    /* The text is positioned absolutely INSIDE the relative parent */
+    .banner-container .banner-text {
+        position: absolute;
+        top: 50%;
+        /* left: 50%; */
+        transform: translateY(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .banner-text a{
+        margin: 0 40px 0 0;
+    }
+    .banner-container .banner-text h2 {
+        color: var(--color-green);
+        font-size: 36px;
+        font-family: 'Work sans', sans-serif;
+        margin: 0 0 0 80px;
+
+
+    }
+
+  /* --- Media Query for Responsiveness --- */
+  @media (max-width: 768px) {
+    .product-section-container {
+        flex-direction: column;
+    }
+}

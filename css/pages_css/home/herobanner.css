@@ -1,0 +1,218 @@
+/* :root {
+    --color-green: #4CAF50;
+    --color-yellow: #FFD700;
+} */
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(213, 245, 230, 0.8);
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* 3 slides */
+    transition: transform 0.5s ease-in-out;
+    background-color: rgb(213, 245, 230, 0.8);
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: rgb(213, 245, 230, 0.8);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Slide Positions */
+.slider #slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+.slider #slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+.slider #slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Navigation Dots */
+.navigation {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.navigation label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 4px;
+    transition: background 0.3s;
+}
+
+.navigation label:hover {
+    background: #999;
+}
+
+/* Active navigation dot */
+.slider #slide1:checked ~ .navigation label[for="slide1"],
+.slider #slide2:checked ~ .navigation label[for="slide2"],
+.slider #slide3:checked ~ .navigation label[for="slide3"] {
+    background: #333;
+}
+
+.herobanner-section{
+    background-image: url('/grocershopNew/assets/images/herobanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100dvw;
+    height: 582px;
+    background-color: rgb(213, 245, 230, 0.8);
+    position: relative;
+}
+
+.herobanner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.herobanner div{
+    width: 100%;
+}
+.herobanner .hero-text{
+    padding: 0 0 0 90px;
+    font-family: "Playfair Display", Sans-serif;
+}
+
+.hero-text p{
+    color: var(--color-brand);
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-family: 'Work sans',sans-serif;
+    margin-bottom: 40px;
+}
+.herobanner div img{
+    object-fit: cover;
+    /* margin-top: 18px; */
+}
+
+.herobanner h4{
+    color: var(--color-brand);
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.herobanner h5{
+    margin-bottom: 15px;
+    color: var(--color-yellow);
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.herobanner span{
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: "Open Sans",sans-serif;
+}
+
+.herobanner button{
+    background-color:var(--color-green);
+    color: white;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 14px 30px;
+    border: 0cap;
+    border-radius: 5px;
+}
+
+.herobanner-section .slick-dots{
+    bottom: 25px;
+}
+
+@media (max-width:1024px){
+    .herobanner-section{
+        margin: 20px 0;
+        height: 350px;
+    }
+
+    .herobanner{
+        height: 350px;
+        gap: 50px;
+    }
+
+    .herobanner div img{
+        width: 314px;
+        height: 318px;
+        margin-bottom: -10px;
+    }
+
+    .herobanner h4 {
+        font-size: 40px;
+        font-family: "Work Sans",sans-serif;
+    }
+
+    .herobanner h5 {
+        font-size: 40px;
+    }
+
+    .herobanner span{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:576px){
+     .herobanner-section {
+       margin-top: 0;
+       margin-bottom: 0;
+    }
+
+    .herobanner-section .slick-next:before{
+        display: none;
+    }
+    .herobanner-section .slick-prev:before{
+        display: none;
+    }
+
+    .herobanner div img{
+        display: none;
+    }
+
+    .herobanner{
+        display: block;
+    }
+
+    .herobanner div{
+        padding: 47px 0px;
+    }
+
+    .herobanner h4{
+        font-size: 36px;
+    }
+
+    .herobanner h5{
+        font-size: 36px;
+        margin: 0 0 10px;
+    }
+
+    .herobanner span{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .herobanner button{
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}

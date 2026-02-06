@@ -1,0 +1,81 @@
+/* General container for admin pages */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-container h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* "Add New Product" Button */
+.add-new-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-new-btn:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+/* The main products table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background-color: #f4f6f8;
+    font-weight: bold;
+    color: #555;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.admin-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* "Edit" and "Delete" links inside the table */
+.action-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.action-links a:hover {
+    opacity: 0.7;
+}
+
+.action-links a.edit {
+    color: #007bff; /* Blue */
+}
+
+.action-links a.delete {
+    color: #dc3545; /* Red */
+}
