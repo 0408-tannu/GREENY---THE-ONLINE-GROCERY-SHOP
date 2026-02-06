@@ -1,10 +1,14 @@
 <?php
-// Clean database import script - standalone
-$servername = "mysql-green-tannuvaghani-c267.h.aivencloud.com";
-$port       = 16562;
-$username   = "avnadmin";
-$password   = "AVNS_DQnKtFiShCA-hNDR0D4";
-$dbname     = "defaultdb";
+Require __DIR__ . '/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+// Aiven MySQL Connection Details
+$servername = $_ENV['HOST'];
+$port       = $_ENV['PORT'];
+$username   = $_ENV['USER'];
+$password   = $_ENV['PASSWORD'];
+$dbname     = $_ENV['DBNAME'];
 
 $conn = mysqli_init();
 mysqli_options($conn, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
