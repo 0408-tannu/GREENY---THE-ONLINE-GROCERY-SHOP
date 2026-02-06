@@ -10,8 +10,6 @@ $username   = $_ENV['USER'];
 $password   = $_ENV['PASSWORD'];
 $dbname     = $_ENV['DBNAME'];
 $conn = mysqli_init();
-
-// For Aiven: Skip CA verification (development only)
 // For production: Download CA certificate from Aiven and use it
 mysqli_options($conn, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
 mysqli_options($conn, MYSQLI_INIT_COMMAND, "SET SESSION sql_mode='NO_ZERO_DATE,NO_ZERO_IN_DATE'");
