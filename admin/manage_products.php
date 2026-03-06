@@ -3,10 +3,10 @@
 session_start();
 
 // 1. Security: Check if the user is an admin
-include '../includes/admin_auth.php';
+include __DIR__ . '/../includes/admin_auth.php';
 
 // 2. Database Connection
-include '../config/db_connect.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // 3. Fetch all products from the database
 $sql = "SELECT id, name, regular_price, final_price, category_id FROM products ORDER BY id DESC";
@@ -25,10 +25,10 @@ $result = $conn->query($sql);
 <body>
 <?php
 // Security check MUST come first
-include '../includes/admin_auth.php';
+include __DIR__ . '/../includes/admin_auth.php';
 
 // Include your new admin header
-include '../admin/includes/header_admin.php';
+include __DIR__ . '/../admin/includes/header_admin.php';
 ?>
     <div class="admin-container">
         <h1>Product Management</h1>

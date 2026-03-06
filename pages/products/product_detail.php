@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 // Include database configuration
-include '../../config/db_connect.php';
+include __DIR__ . '/../../config/db_connect.php';
 
 // Check if a product ID is provided in the URL, redirect if not
 if (!isset($_GET['id']) || empty($_GET['id'])) {
@@ -60,7 +60,7 @@ if (!$product) {
 
 <body class="page-background">
 
-    <?php include '../../includes/header.php'; ?>
+    <?php include __DIR__ . '/../../includes/header.php'; ?>
 
     <main class="container-product-details">
         <div class="product-container" data-product-id="<?php echo htmlspecialchars($product['id']); ?>">
@@ -193,7 +193,7 @@ if (!$product) {
                     formData.append('product_id', productId);
                     formData.append('quantity', quantity);
 
-                    fetch('/grocershopNew/api/add_to_cart.php', {
+                    fetch('/api/add_to_cart.php', {
                         method: 'POST',
                         body: formData
                     })

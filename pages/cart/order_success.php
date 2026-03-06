@@ -47,14 +47,14 @@ $order_id = isset($_GET['order_id']) ? (int)$_GET['order_id'] : 0;
 </head>
 <body>
 
-    <?php include '../../includes/header.php'; ?>
+    <?php include __DIR__ . '/../../includes/header.php'; ?>
 
     <main class="container">
         <div class="success-container">
             <div class="success-icon">&#10004;</div> <h1>Thank You For Your Order!</h1>
             <p>Your order has been placed successfully.</p>
             <p>Your Order Number is: <strong>#<?php echo $order_id; ?></strong></p>
-            <a href="/grocershopNew/pages/products/products.php" class="continue-shopping-btn">Continue Shopping</a>
+            <a href="/pages/products/products.php" class="continue-shopping-btn">Continue Shopping</a>
         </div>
     </main>
 

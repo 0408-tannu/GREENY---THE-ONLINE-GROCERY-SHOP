@@ -3,8 +3,8 @@
 session_start(); // Ensure session starts if admin_auth doesn't do it
 
 // Adjust these paths if necessary, based on where you save this file
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // 2. Get and Validate Customer ID from URL
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -80,7 +80,7 @@ $orders_result = $stmt_orders->get_result();
 </head>
 <body>
 
-    <?php include 'includes/header_admin.php'; ?>
+    <?php include __DIR__ . '/includes/header_admin.php'; ?>
 
     <main class="admin-main-content">
         <div class="page-container">

@@ -1,8 +1,8 @@
 <?php
 // --- PHP LOGIC FIRST ---
 // Security check and session start
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // Check if an order ID is provided in the URL
 if (!isset($_GET['id'])) {
@@ -49,7 +49,7 @@ $stmt_items->close();
 </head>
 <body>
 
-    <?php include 'includes/header_admin.php'; ?>
+    <?php include __DIR__ . '/includes/header_admin.php'; ?>
 
     <main class="admin-main-content">
         <div class="order-details-container">

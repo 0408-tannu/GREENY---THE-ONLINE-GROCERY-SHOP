@@ -1,8 +1,8 @@
 <?php
 // --- PHP LOGIC FIRST ---
 // 1. Security check, session start, and DB connection
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // --- HANDLE STATUS UPDATE FORM SUBMISSION ---
 $success_msg = "";
@@ -157,7 +157,7 @@ $result = $conn->query($sql);
 
     <?php
     // Include your new admin header
-    include '../admin/includes/header_admin.php';
+    include __DIR__ . '/../admin/includes/header_admin.php';
     ?>
 
     <div class="admin-container">

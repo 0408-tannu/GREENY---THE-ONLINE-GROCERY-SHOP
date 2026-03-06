@@ -1,1 +1,6 @@
 .env
+vendor/
+composer.lock
+*.zip
+
+ask.sh

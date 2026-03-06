@@ -4,11 +4,11 @@ if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Enable MySQLi error reporting to catch silent database errors
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-include_once '../../config/db_connect.php';
+include_once __DIR__ . '/../../config/db_connect.php';
 
 // Redirect if cart is empty or user is not logged in
 if (empty($_SESSION['cart']) || !isset($_SESSION['user_id'])) {
-    header('Location: /grocershopNew/index.php');
+    header('Location: /index.php');
     exit();
 }
 
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conn->commit();
 
         unset($_SESSION['cart']); // Clear the cart
-        header('Location: /grocershopNew/pages/cart/order_success.php?order_id=' . $order_id);
+        header('Location: /pages/cart/order_success.php?order_id=' . $order_id);
         exit();
 
     } catch (Exception $e) {
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conn->rollback();
         // Redirect back to cart with the specific error message so we know what happened
         $_SESSION['cart_error'] = "Order Failed: " . $e->getMessage();
-        header('Location: /grocershopNew/pages/cart/cart.php');
+        header('Location: /pages/cart/cart.php');
         exit();
     }
 }
@@ -140,8 +140,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="text-center mb-8">
             <h1 class="text-4xl font-bold">Checkout</h1>
             <p class="text-gray-500 mt-2">
-                <a href="/grocershopNew/index.php">Home</a> / 
-                <a href="/grocershopNew/pages/cart/cart.php">Shopping Cart</a> / 
+                <a href="/index.php">Home</a> / 
+                <a href="/pages/cart/cart.php">Shopping Cart</a> / 
                 <span class="text-gray-400">Checkout</span>
             </p>
         </div>

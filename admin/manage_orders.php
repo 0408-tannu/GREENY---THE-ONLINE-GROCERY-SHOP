@@ -1,6 +1,6 @@
 <?php
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // --- HANDLE STATUS UPDATE FORM SUBMISSION ---
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
@@ -67,7 +67,7 @@ $statuses = ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'];
 </head>
 <body>
 
-    <?php include 'includes/header_admin.php'; ?>
+    <?php include __DIR__ . '/includes/header_admin.php'; ?>
 
     <main class="admin-main-content">
         <div class="dashboard-container">

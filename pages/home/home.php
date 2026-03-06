@@ -18,15 +18,15 @@ include 'config/db_connect.php'; // Adjusted path
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeny - Your Online Grocery Shop</title>
     
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/includes/header.css">
-    <link rel="stylesheet" href="css/pages_Css/home/herobanner.css">
-    <link rel="stylesheet" href="css/pages_Css/home/shop_by_dept.css">
-    <link rel="stylesheet" href="css/pages_Css/home/deal_of_the_day.css">
-    <link rel="stylesheet" href="css/pages_Css/home/hot_offers.css">
-    <link rel="stylesheet" href="css/pages_css/product/product.css">
-    <link rel="stylesheet" href="css/pages_css/home/featured_product.css">
-    <link rel="stylesheet" href="css/pages_css/home/premium_popular.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/includes_css/header.css">
+    <link rel="stylesheet" href="/css/pages_css/home/herobanner.css">
+    <link rel="stylesheet" href="/css/pages_css/home/shop_by_dept.css">
+    <link rel="stylesheet" href="/css/pages_css/home/deal_of_the_day.css">
+    <link rel="stylesheet" href="/css/pages_css/home/hot_offers.css">
+    <link rel="stylesheet" href="/css/pages_css/product/product.css">
+    <link rel="stylesheet" href="/css/pages_css/home/featured_product.css">
+    <link rel="stylesheet" href="/css/pages_css/home/premium_popular.css">
 
 </head>
 <body>
@@ -118,7 +118,7 @@ include 'config/db_connect.php'; // Adjusted path
                     formData.append('quantity', quantity);
 
                     // Send the data to your API
-                    fetch('/grocershopNew/api/add_to_cart.php', {
+                    fetch('/api/add_to_cart.php', {
                         method: 'POST',
                         body: formData
                     })

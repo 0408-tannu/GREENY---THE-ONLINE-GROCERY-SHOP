@@ -6,9 +6,9 @@ include 'includes/product_functions.php';
 ?>
 
 <div class="deal-of-the-day">
-<img src="/grocershopNew/assets/images/cutout2.png" alt="cutout">
+<img src="/assets/images/cutout2.png" alt="cutout">
     <!-- <div class="cutout-flex">
-        <img src="/grocershopNew/assets/images/cutout2.png" alt="cutout">
+        <img src="/assets/images/cutout2.png" alt="cutout">
     </div> -->
 
     <div class="container text">
@@ -22,8 +22,8 @@ include 'includes/product_functions.php';
                     <p>So what are you waiting for,</p>
                     <p class="color-green">Grab the product NOW !!</p>
                 </div>
-                <!-- <a href="/grocershopNew/pages/products/products.php?deal=Deal+of+the+Day" class="order-btn"> -->
-                <a href="/grocershopNew/pages/products/products.php?deal=Deal+of+the+Day" class="order-btn">
+                <!-- <a href="/pages/products/products.php?deal=Deal+of+the+Day" class="order-btn"> -->
+                <a href="/pages/products/products.php?deal=Deal+of+the+Day" class="order-btn">
                     <button>ORDER NOW</button>
                 </a>
             </div>

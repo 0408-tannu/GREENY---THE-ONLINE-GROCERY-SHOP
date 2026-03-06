@@ -1,5 +1,5 @@
 <div class="herobanner-products ">
-    <img src="\grocershopNew\assets\images\hbanner-2.webp" alt="herobanner">
+    <img src="/assets/images/hbanner-2.webp" alt="herobanner">
 
     
         <div class="hbanner-for-products-text">

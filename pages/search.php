@@ -3,8 +3,8 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include_once '../config/db_connect.php';
-include_once '../includes/product_functions.php';
+include_once __DIR__ . '/../config/db_connect.php';
+include_once __DIR__ . '/../includes/product_functions.php';
 
 // Get the search query from the URL
 $search_query = isset($_GET['query']) ? trim($_GET['query']) : '';
@@ -34,7 +34,7 @@ if (!empty($search_query)) {
         $product_id = $product['id'];
 
         // Immediately redirect the user to the product's detail page
-        header("Location: /grocershopNew/pages/products/product_detail.php?id=" . $product_id);
+        header("Location: /pages/products/product_detail.php?id=" . $product_id);
         exit(); // Stop the script to ensure the redirect happens
     }
     // =======================================================
@@ -52,7 +52,7 @@ if (!empty($search_query)) {
 </head>
 <body>
 
-    <?php include_once '../includes/header.php'; ?>
+    <?php include_once __DIR__ . '/../includes/header.php'; ?>
 
     <main class="container">
         <div class="search-results-header">

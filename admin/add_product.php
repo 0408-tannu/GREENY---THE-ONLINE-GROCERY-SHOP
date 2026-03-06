@@ -2,8 +2,8 @@
 // --- PHP LOGIC FIRST ---
 
 // 1. Include security and database connection
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 $message = '';
 
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php
     // Include your standard admin header
-    include '../admin/includes/header_admin.php';
+    include __DIR__ . '/../admin/includes/header_admin.php';
     ?>
 
     <main class="admin-main-content">

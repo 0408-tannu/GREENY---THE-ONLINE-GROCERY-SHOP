@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/grocershopNew/css/includes_css/footer.css">
+<link rel="stylesheet" href="/css/includes_css/footer.css">
 
 <div class="facilitybar">
     <div class="container">
@@ -62,7 +62,7 @@
         <div class="footer-flex">
             
             <div class="footer-item1">
-                <img src="/grocershopNew/assets/logo/greeny.png" alt="Greeny Logo">
+                <img src="/assets/logo/greeny.png" alt="Greeny Logo">
                 <p>Do you have a question?</p>
                 <a href="tel:846-006-6940">846-006-6940</a>
                 <span>7:00 AM - 9:00 PM</span>
@@ -73,13 +73,13 @@
             <div class="footer-item2">
                 <div>
                     <h3>My Account</h3>
-                    <a href="/grocershopNew/pages/account/my_account.php">Profile</a>
-                    <a href="/grocershopNew/pages/cart/cart.php">Your Cart</a>
+                    <a href="/pages/account/my_account.php">Profile</a>
+                    <a href="/pages/cart/cart.php">Your Cart</a>
                     <a href="#">Wishlist</a>
                 </div>
                 <div>
                     <h3>Help</h3>
-                    <a href="/grocershopNew/pages/contact_us.php">Contact</a>
+                    <a href="/pages/contact_us.php">Contact</a>
                     <a href="#">Faqs</a>
                     <a href="#">Terms & Conditions</a>
                     <a href="#">Privacy Policy</a>
@@ -87,19 +87,19 @@
                 <div>
                     <h3>Company</h3>
                     <a href="#">About Us</a>
-                    <a href="/grocershopNew/pages/products/products.php">Products</a>
+                    <a href="/pages/products/products.php">Products</a>
                 </div>
             </div>
 
             <div class="footer-item3">
                 <h3>Download App</h3>
                 <div class="item3-flex">
-                    <a href="#"><img src="/grocershopNew/assets/images/app.svg" alt="App Store"></a>
-                    <a href="#"><img src="/grocershopNew/assets/images/play.svg" alt="Google Play"></a>
+                    <a href="#"><img src="/assets/images/app.svg" alt="App Store"></a>
+                    <a href="#"><img src="/assets/images/play.svg" alt="Google Play"></a>
                 </div>
                 <h4>Payment Method</h4>
                 <div class="method-flex">
-                    <img src="/grocershopNew/assets/images/m1.svg" alt="Payment Methods">
+                    <img src="/assets/images/m1.svg" alt="Payment Methods">
                 </div>
             
         </div>

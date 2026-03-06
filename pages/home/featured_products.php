@@ -30,9 +30,9 @@ $featured_result = $conn->query($featured_sql);
                     }
 
                     echo '        <div class="product-image-container">';
-                    echo '            <a href="/grocershopNew/pages/products/product_detail.php?id=' . $product['id'] . '"><img src="' . htmlspecialchars($product['image_url']) . '" alt="' . htmlspecialchars($product['name']) . '"></a>';
+                    echo '            <a href="/pages/products/product_detail.php?id=' . $product['id'] . '"><img src="' . htmlspecialchars($product['image_url']) . '" alt="' . htmlspecialchars($product['name']) . '"></a>';
                     echo '        </div>';
-                    echo '        <h3><a href="/grocershopNew/pages/products/product_detail.php?id=' . $product['id'] . '" style="text-decoration:none; color:inherit;">' . htmlspecialchars($product['name']) . '</a></h3>';
+                    echo '        <h3><a href="/pages/products/product_detail.php?id=' . $product['id'] . '" style="text-decoration:none; color:inherit;">' . htmlspecialchars($product['name']) . '</a></h3>';
                     
                     echo '        <p class="price">';
                     if ($product['final_price'] < $product['regular_price']) {

@@ -1,11 +1,11 @@
 <?php
 // --- PHP LOGIC FIRST ---
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-include_once '../../config/db_connect.php';
+include_once __DIR__ . '/../../config/db_connect.php';
 
 // Check if the user is logged in. If not, redirect to the login page.
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /grocershopNew/login.php");
+    header("Location: /login.php");
     exit();
 }
 
@@ -66,7 +66,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'profile';
 </head>
 <body>
 
-    <?php include_once '../../includes/header.php'; ?>
+    <?php include_once __DIR__ . '/../../includes/header.php'; ?>
 
     <main class="container-account">
         <div class="mb-8">
@@ -81,7 +81,7 @@ $activePage = isset($_GET['page']) ? $_GET['page'] : 'profile';
                         <li><a href="?page=profile" class="<?php echo ($activePage === 'profile') ? 'active' : ''; ?>"><i class="fas fa-user-circle"></i> My Profile</a></li>
                         <li><a href="?page=orders" class="<?php echo ($activePage === 'orders') ? 'active' : ''; ?>"><i class="fas fa-box"></i> Order History</a></li>
                         <li><a href="?page=addresses" class="<?php echo ($activePage === 'addresses') ? 'active' : ''; ?>"><i class="fas fa-map-marker-alt"></i> Saved Addresses</a></li>
-                        <li><a href="/grocershopNew/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <li><a href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </nav>
             </aside>

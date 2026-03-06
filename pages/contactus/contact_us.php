@@ -2,7 +2,7 @@
 // --- PHP LOGIC FIRST ---
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
-include '../../config/db_connect.php';
+include __DIR__ . '/../../config/db_connect.php';
 
 $message_sent = false;
 $error_message = '';
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-    <?php include '../../includes/header.php'; ?>
+    <?php include __DIR__ . '/../../includes/header.php'; ?>
 
     <div class="container-contact">
         <div class="contact-card">
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php
     // 5. Close the database connection and include the footer
     $conn->close();
-    include '../../includes/footer.php'; // You can create and include a footer later
+    include __DIR__ . '/../../includes/footer.php'; // You can create and include a footer later
     ?>
 
 </body>

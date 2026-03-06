@@ -7,7 +7,7 @@ function display_product_section($title, $products_result, $conn, $is_slider, $c
     echo '    <div class="section-header">';
     echo '        <h2>' . htmlspecialchars($title) . '</h2>';
     if ($is_slider && $category_id !== null) {
-        echo '        <a href="/grocershopNew/pages/products/products.php?category_id=' . $category_id . '" class="view-all-link">View All &rarr;</a>';
+        echo '        <a href="/pages/products/products.php?category_id=' . $category_id . '" class="view-all-link">View All &rarr;</a>';
     }
     echo '    </div>';
 
@@ -46,7 +46,7 @@ function display_product_section($title, $products_result, $conn, $is_slider, $c
                             </div>';
             if (isset($product['discount_percentage']) && $product['discount_percentage'] > 0) {
                 echo '        <div class="image coupon-banner">
-                                    <img src="/grocershopNew/assets/images/coupan.jpg" alt="Coupon"><div class="text">
+                                    <img src="/assets/images/coupan.jpg" alt="Coupon"><div class="text">
                                             <span class="text-span">Digital coupon: ' . htmlspecialchars($product['discount_percentage']) . '% OFF</span>
                                     </div>
                                 </div>';
@@ -123,11 +123,11 @@ function display_simple_product_section($title, $products_result, $is_slider) {
 
             // --- SIMPLE PRODUCT CARD HTML ---
             echo '    <div class="product-card">';
-            echo '        <a href="/grocershopNew/pages/products/product_detail.php?id=' . $product['id'] . '">';
+            echo '        <a href="/pages/products/product_detail.php?id=' . $product['id'] . '">';
             echo '            <img src="' . htmlspecialchars($product['image_url']) . '" alt="' . htmlspecialchars($product['name']) . '">';
             echo '        </a>';
             echo '        <h3>
-                                <a href="/grocershopNew/pages/products/product_detail.php?id=' . $product['id'] . '">' . htmlspecialchars($product['name']) . '</a>
+                                <a href="/pages/products/product_detail.php?id=' . $product['id'] . '">' . htmlspecialchars($product['name']) . '</a>
                           </h3>';
             echo '        <p class="price">' . htmlspecialchars($product['final_price']) .'  Rs.</p>';
             

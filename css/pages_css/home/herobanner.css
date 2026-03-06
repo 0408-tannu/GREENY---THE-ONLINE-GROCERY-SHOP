@@ -69,7 +69,7 @@ input[type="radio"] {
 }
 
 .herobanner-section{
-    background-image: url('/grocershopNew/assets/images/herobanner.png');
+    background-image: url('/assets/images/herobanner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

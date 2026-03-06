@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // Check if an ID is passed in the URL
 if (isset($_GET['id'])) {

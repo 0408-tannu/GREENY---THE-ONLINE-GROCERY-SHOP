@@ -1,9 +1,9 @@
 <?php
 // Security check and session start
-include '../includes/admin_auth.php';
+include __DIR__ . '/../includes/admin_auth.php';
 
 // Include the database connection
-include '../config/db_connect.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // SQL query to fetch all users who have the 'customer' role
 $sql = "SELECT id, name, email FROM users WHERE role = 'customer' ORDER BY id DESC";
@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 
     <?php 
     // This includes your standardized admin header
-    include 'includes/header_admin.php'; 
+    include __DIR__ . '/includes/header_admin.php'; 
     ?>
 
     <main class="admin-main-content">

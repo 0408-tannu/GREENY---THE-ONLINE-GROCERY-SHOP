@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../includes/admin_auth.php';
-include '../config/db_connect.php';
+include __DIR__ . '/../includes/admin_auth.php';
+include __DIR__ . '/../config/db_connect.php';
 
 $product = null;
 $message = '';
@@ -64,10 +64,10 @@ if (isset($_GET['id'])) {
 <body>
     <?php
     // Security check MUST come first
-    include '../includes/admin_auth.php';
+    include __DIR__ . '/../includes/admin_auth.php';
 
     // Include your new admin header
-    include '../admin/includes/header_admin.php';
+    include __DIR__ . '/../admin/includes/header_admin.php';
     ?>
     <div class="form-container">
         <h2>Edit Product</h2>

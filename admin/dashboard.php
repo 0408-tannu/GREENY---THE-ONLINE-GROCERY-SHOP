@@ -1,9 +1,9 @@
 <?php
 // Security check and session start
-include '../includes/admin_auth.php';
+include __DIR__ . '/../includes/admin_auth.php';
 
 // Database connection
-include '../config/db_connect.php';
+include __DIR__ . '/../config/db_connect.php';
 
 // --- PHP LOGIC TO FETCH ALL DASHBOARD DATA ---
 
@@ -51,7 +51,7 @@ $recent_orders_result = $conn->query($recent_orders_sql);
 
     <?php 
     // This includes your standardized admin header
-    include 'includes/header_admin.php'; 
+    include __DIR__ . '/includes/header_admin.php'; 
     ?>
 
     <main class="admin-main-content">

@@ -34,7 +34,7 @@
     .card-premium {
         background-color: #c8f7e1; /* Light mint green */
         flex: 13; /* This card takes up ~65% of the space */
-        background-image: url('/grocershopNew/assets/images/primium-image.png');
+        background-image: url('/assets/images/primium-image.png');
         background-position: right;  
         background-size: 350px;
         background-repeat: no-repeat;

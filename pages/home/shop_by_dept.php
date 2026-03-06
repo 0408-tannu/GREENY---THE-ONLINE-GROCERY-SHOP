@@ -17,9 +17,9 @@
                         echo '<div class="swiper-slide">';
                         
                         // 4. This is YOUR UNCHANGED CARD CODE, wrapped in a link
-                        echo '  <a href="/grocershopNew/pages/products/products.php?category_id=' . $category['id'] . '" class="department-link">';
+                        echo '  <a href="/pages/products/products.php?category_id=' . $category['id'] . '" class="department-link">';
                         echo '      <div class="image-box">';
-                        echo '          <img src="/grocershopNew/' . htmlspecialchars($category['image_url']) . '" alt="' . htmlspecialchars($category['name']) . '">';
+                        echo '          <img src="/' . htmlspecialchars($category['image_url']) . '" alt="' . htmlspecialchars($category['name']) . '">';
                         echo '          <span>' . htmlspecialchars($category['name']) . '</span>';
                         echo '      </div>';
                         echo '  </a>';

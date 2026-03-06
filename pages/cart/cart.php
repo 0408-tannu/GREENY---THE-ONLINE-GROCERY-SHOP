@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include_once '../../config/db_connect.php';
+include_once __DIR__ . '/../../config/db_connect.php';
 
 // --- Logic to handle item DELETION ---
 if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id'])) {
@@ -202,7 +202,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 <body>
 
-    <?php include_once '../../includes/header.php'; ?>
+    <?php include_once __DIR__ . '/../../includes/header.php'; ?>
 
     <div class="page-header">
         <div class="container">
@@ -311,7 +311,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 </div>
             </div>
         <?php else: ?>
-            <p class="empty-cart-message">Your cart is empty. <a href="/grocershopNew/pages/products/products.php">Start
+            <p class="empty-cart-message">Your cart is empty. <a href="/pages/products/products.php">Start
                     shopping!</a></p>
         <?php endif; ?>
     </main>

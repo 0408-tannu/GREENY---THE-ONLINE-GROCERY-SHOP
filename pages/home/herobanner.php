@@ -27,7 +27,7 @@ $images = [
                         <!-- <span>Save up to 50% on your first order</span> -->
                         <!-- <button>ORDER NOW</button> -->
 
-            <a href="/grocershopNew/pages/products/products.php">
+            <a href="/pages/products/products.php">
                             
                                 <button>ORDER NOW</button>
                             </a>
@@ -47,7 +47,7 @@ $images = [
                         <h5>organic food</h5>
                         <span>Save up to 20% off</span>
                         <!-- <button>ORDER NOW</button> -->
-            <a href="/grocershopNew/pages/products/products.php?category_id=1" >
+            <a href="/pages/products/products.php?category_id=1" >
                         
                                 <button>ORDER NOW</button>
                             </a>
@@ -68,7 +68,7 @@ $images = [
                         <span>Save up to 50% on your first order</span>
                         <!-- <button>ORDER NOW</button> -->
 
-            <a href="/grocershopNew/pages/products/products.php?category_id=5">
+            <a href="/pages/products/products.php?category_id=5">
                        
                                 <button>ORDER NOW</button>
                             </a>
